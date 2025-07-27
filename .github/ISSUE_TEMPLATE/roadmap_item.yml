@@ -1,0 +1,117 @@
+name: New Roadmap Item Proposal
+description: Use this template to propose a new feature or significant task for the project roadmap.
+title: "[Roadmap] <Feature ID> - <Feature Name>"
+labels: ["roadmap", "status: Not Started"] # Default labels for new roadmap items
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new roadmap item! Please fill out the details below.
+        
+        **Note:** Feature IDs should ideally be unique and follow the project's numbering scheme (e.g., 3.19, 4.01).
+  - type: input
+    id: feature-id
+    attributes:
+      label: Feature ID
+      description: The unique identifier for this roadmap item (e.g., 3.19, 4.01).
+      placeholder: e.g., 3.19
+    validations:
+      required: true
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature Name
+      description: A concise name for this feature or task.
+      placeholder: e.g., Bug Tracking & Feedback System
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a comprehensive description of what this roadmap item entails.
+      placeholder: Detail the functionality, purpose, and scope.
+      rows: 6
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Project Phase
+      description: In which phase of the roadmap does this item belong?
+      options:
+        - Phase 0: Environment Setup & Core App Infrastructure
+        - Phase 1: Core Campaign Management & Basic Interaction
+        - Phase 2: Essential Data Management & Key AI Features
+        - Phase 3: Core UI/UX Refinement & Settings (After Restructuring)
+        - Phase 4: Advanced Companion Tools & Ecosystem Integration (After Restructuring)
+        - Phase 5: Major External Integrations & Advanced Systems (After Restructuring)
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How critical is this roadmap item?
+      options:
+        - P0 (Critical)
+        - P1 (High)
+        - P2 (Medium)
+        - P3 (Low)
+        - P4 (Stretch Goal)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ### Status Breakdown (Initial)
+        Please indicate the initial status for different components.
+  - type: dropdown
+    id: backend-status
+    attributes:
+      label: Backend Status
+      options:
+        - Not Started
+        - In Progress
+        - Pending Testing
+        - Functional
+        - Completed
+        - N/A
+      default: 0 # Not Started
+    validations:
+      required: true
+  - type: dropdown
+    id: frontend-status
+    attributes:
+      label: Frontend Status
+      options:
+        - Not Started
+        - In Progress
+        - Pending Testing
+        - Functional
+        - Completed
+        - N/A
+      default: 0 # Not Started
+    validations:
+      required: true
+  - type: dropdown
+    id: ai-instruction-status
+    attributes:
+      label: AI Instruction Status
+      options:
+        - Not Started
+        - In Progress
+        - Pending Testing
+        - Functional
+        - Completed
+        - N/A
+      default: 0 # Not Started
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any other relevant details, assumptions, or dependencies.
+      rows: 4
+      placeholder: e.g., Depends on feature X. Requires external API key.
