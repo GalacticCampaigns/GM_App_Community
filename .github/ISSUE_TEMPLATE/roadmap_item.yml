@@ -31,7 +31,6 @@ body:
       label: Description
       description: Provide a comprehensive description of what this roadmap item entails.
       placeholder: Detail the functionality, purpose, and scope.
-      rows: 6
     validations:
       required: true
   - type: dropdown
@@ -113,5 +112,6 @@ body:
     attributes:
       label: Additional Notes
       description: Any other relevant details, assumptions, or dependencies.
-      rows: 4
       placeholder: e.g., Depends on feature X. Requires external API key.
+    validations:
+      required: false # Notes can be optional
